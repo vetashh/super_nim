@@ -20,16 +20,16 @@ def start_game():
                 print(play(step))
             elif n in letters:
                 num_column = letters.index(n)
-                for i in range(8):
-                    board[i][num_column] = 0
+                for ind_row in range(8):
+                    board[ind_row][num_column] = 0
             else:
                 num_row = numbers.index(n)
-                for j in range(8):
-                    board[num_row][j] = 0
+                for ind_column in range(8):
+                    board[num_row][ind_column] = 0
             step += 1
             print(letters_board)
-            for i in range(8):
-                print(i+1, board[i])
+            for ind in range(8):
+                print(ind+1, board[ind])
         print(f'Победил игрок {(step - 1) % 2 + 1} \n')
     play(step)
 
