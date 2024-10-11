@@ -3,7 +3,6 @@ def start_game():
     letters_board = '   a  b  c  d  e  f  g  h'
     board = [[] for i in range(8)]
     print(letters_board)
-    print(board)
     for ind_row in range(1, 9):
         for ind_col in range(8):
             board[ind_row-1].append(random.choice([0, 1]))
